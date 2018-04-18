@@ -2,67 +2,100 @@
     <header class="mb-auto">
     </header>
     <main class="text-center">
-        <img class="img-thumbnail rounded" src="https://avatars2.githubusercontent.com/u/8195623?s=460&v=4" width="200">
-        <h1>Justin Mathieu</h1>
-        <h4 class="text-primary">Full stack developer</h4>
-        <a class="btn btn-danger btn-large mt-2" href="javascript:void(0)" (click)="scrollToSection('about')"><h3>About Me</h3></a>
+        <h1 class="display-3 mb-4">Hi, my name is <span class="text-warning">Justin Mathieu</span></h1>
+        <h4 class="text-primary">
+            <p>
+                <span class="line">I'm a <span class="text-danger">full-stack developer</span> currently living in</span>
+                <span class="line"><span class="text-info"><i class="fa fa-map-marker-alt ml-1"></i> Milwaukee, Wisconsin</span></span>
+            </p>
+            <p>
+
+            </p>
+        </h4>
+        
     </main>
-    <footer class="mt-auto text-right">    
-        <a (click)="scrollToSection('contact')" class="btn btn-link btn-large mt-2" href="javascript:void(0)">Get In Contact</a>  
+    <footer class="mt-auto text-center">    
+        <a (click)="scrollToSection('about')" class="btn btn-link text-primary" href="javascript:void(0)">  
+            <h4 class="mb-0">
+                <div>learn a bit about me</div>
+                <div><i class="fa fa-chevron-down"></i></div>
+            </h4>
+        </a>
     </footer>
 </div>
 <div id="about" class="bg-primary container-fluid d-flex h-100 p-3 mx-auto flex-column">
-    <header class="mb-auto">
+    <header class="mb-auto text-center">
     </header>
     <main class="text-center">
-        <h1>About Me</h1>
-        <p>
-            Talking about where I live, what I am passionate about, etc.
-        </p>
-        <a class="btn btn-danger btn-large mt-2" href="javascript:void(0)" (click)="scrollToSection('experience')"><h3>My Experience</h3></a>
+        <h4 class="text-dark">
+            <p>
+                I love staying on the bleeding edge of technology, keeping up-to-date with the latest javascript frameworks, utilizing the best practices for UI/UX design,
+                database design, server/client interaction and always looking forward into emerging fields like data science and artificial intelligence.
+            </p>
+        </h4>
     </main>
-    <footer class="mt-auto">
+    <footer class="mt-auto text-center">
+        <a (click)="scrollToSection('experience')" class="btn btn-link text-dark" href="javascript:void(0)">  
+            <h4 class="mb-0">
+                <div>my work experience</div>
+                <div><i class="fa fa-chevron-down"></i></div>
+            </h4>
+        </a>
     </footer>
 </div>
 <div class="bg-info container-fluid d-flex h-100 p-3 mx-auto flex-column" id="experience">
     <header class="mb-auto">
     </header>
     <main class="text-center">
-        <h1>My Experience</h1>
-        <p>
-            I worked at a bunch of places
-        </p>
-        <a class="btn btn-danger btn-large mt-2" href="javascript:void(0)" (click)="scrollToSection('projects')"><h3>My Projects</h3></a>
+        <h4 class="text-dark">
+            <p>
+                Here I will talk about where I worked, etc.
+            </p>
+        </h4>
     </main>
-    <footer class="mt-auto">
+    <footer class="mt-auto text-center">
+        <a (click)="scrollToSection('projects')" class="btn btn-link text-dark" href="javascript:void(0)">  
+            <h4 class="mb-0">
+                <div>see some of my projects</div>
+                <div><i class="fa fa-chevron-down"></i></div>
+            </h4>
+        </a>
     </footer>
 </div>
-<div class="bg-light container-fluid d-flex h-100 p-3 mx-auto flex-column" id="projects">
+<div class="bg-secondary container-fluid d-flex h-100 p-3 mx-auto flex-column" id="projects">
     <header class="mb-auto">
     </header>
     <main class="text-center">
-        <h1>My Projects</h1>
-        <p>
-            These are the things I've worked on
-        </p>
-        <a class="btn btn-danger btn-large mt-2" href="javascript:void(0)" (click)="scrollToSection('contact')"><h3>Contact Me</h3></a>
+        <h4 class="text-dark">
+            <p>
+                These are the things I've worked on.
+            </p>
+        </h4>
     </main>
-    <footer class="mt-auto">
+    <footer class="mt-auto text-center">
+        <h4 class="mb-0 text-dark"> 
+            Ready to make <span class="text-danger font-weight-bold">amazing</span> products together?
+        </h4>
+        <a (click)="scrollToSection('contact')" class="btn btn-link text-dark" href="javascript:void(0)">
+            <h4 class="mb-0">
+                <div><i class="fa fa-chevron-down"></i></div>
+            </h4>
+        </a>
     </footer>
 </div>
 <div class="text-light bg-dark container-fluid d-flex h-100 p-3 mx-auto flex-column" id="contact">
     <header class="mb-auto">
     </header>
     <main class="text-center">
-        <h1 class="mb-4">Contact Me</h1>
+        <h1 class="mb-4 display-3 text-danger">Contact Me</h1>
         <div class="row justify-content-center">
-            <div class="col-auto">
+            <div class="col-xs-12 col-md-auto p-4">
                 <a href="#" class="btn btn-outline-light"><h3 class="mb-0"><i class="fa fa-envelope"></i> Email</h3></a>
             </div>
-            <div class="col-auto">
+            <div class="col-xs-12 col-md-auto p-4">
                 <a href="#" class="btn btn-outline-light p-2"><h3 class="mb-0"><i class="fab fa-linkedin"></i> LinkedIn</h3></a>
             </div>
-            <div class="col-auto">
+            <div class="col-xs-12 col-md-auto p-4">
                 <a class="btn btn-outline-light p-2" href="#"><h3 class="mb-0"><i class="fab fa-github"></i> Github</h3></a>
             </div>
         </div>

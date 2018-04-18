@@ -2,3 +2,15 @@
     font-size: 1.1em;
     font-weight: 600;
 }
+
+a:hover {
+    text-decoration: none !important
+}
+
+.display-3 {
+    font-size: 8vh;
+}
+
+span.line {
+  display: inline-block;
+}
