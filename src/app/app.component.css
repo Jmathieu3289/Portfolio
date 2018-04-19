@@ -8,9 +8,17 @@ a:hover {
 }
 
 .display-3 {
-    font-size: 8vh;
+    font-size: 7vh;
 }
 
 span.line {
   display: inline-block;
+}
+
+li {
+    padding: 5px;
+}
+
+.carousel-inner {
+    border-radius: 10px;
 }
