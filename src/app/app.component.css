@@ -19,6 +19,7 @@ li {
     padding: 5px;
 }
 
-.carousel-inner {
+.carousel-inner, .carousel-item, img {
     border-radius: 10px;
+    height: 100%;
 }
