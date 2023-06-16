@@ -1,0 +1,15 @@
+// Variable overrides
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Additional custom code here
+
+h1 {
+    font-size: 10vh;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 6vh;
+    font-weight: lighter;
+}
