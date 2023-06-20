@@ -1,9 +1,123 @@
-<div id="hero-container" class="vh-100 bg-dark position-relative">
-    <div class="w-100 h-100 d-flex flex-column justify-content-center align-items-center position-absolute">
-        <h1 class="text-white">Hi. My Name Is Justin.</h1>
-        <h2 class="text-white">I Like To Make Cool Stuff.</h2>
+<div id="hero-container" class="vh-100 bg-dark position-fixed z-n1">
+</div>
+<div class="w-100 vh-100 d-flex flex-column justify-content-center align-items-center position-relative">
+    <h1 class="text-white">Hi. My Name Is Justin.</h1>
+    <h2 class="text-white">I Like To Make Cool Stuff.</h2>
+</div>
+<div class="w-100 vh-100 d-flex flex-column justify-content-center align-items-center position-relative">
+    <div class="text-center" [class.opacity-0]="bgTextHidden" style="transition: opacity 0.3s">
+        <h2 class="text-white">Like this background, for example!</h2>
+        <button type="button" class="btn btn-lg btn-rounded btn-outline-light mt-4" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBackgroundControls" aria-controls="offcanvasBackgroundControls" (click)="bgTextHidden = true;">Show Me How It Was Made</button>
     </div>
 </div>
-<div>
-    Blah blah blah
+<div 
+class="vh-100 w-25 offcanvas offcanvas-start position-fixed bg-dark" 
+data-bs-backdrop="false"
+data-bs-scroll="false"
+data-bs-theme="dark"
+tabindex="-1" 
+id="offcanvasBackgroundControls">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasTopLabel"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" (click)="bgTextHidden = false;"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div>
+            <h4>Code</h4>
+            <div class="mb-3 mt-1">
+                <pre class="border p-1 language-javascript"><code style="max-height: 500px;">{{backgroundCode}}</code></pre>
+            </div>
+            <h4>Variables</h4>
+            <div class="mt-3">
+                <div class="border-bottom mb-3">
+                    <label class="fw-bold">MOUSE_INFLUENCE</label><br>
+                    <small>How fast the particles move away from the mouse</small>
+                    <div class="mt-1">
+                        <label class="float-start">slower</label>
+                        <label class="float-end">faster</label>
+                        <input type="range" class="form-range" min="0" max="0.05" step="0.001" [(ngModel)]="MOUSE_INFLUENCE">
+                    </div>
+                </div>
+                <div class="border-bottom mb-3">
+                    <label class="fw-bold">FLOW_INFLUENCE</label><br>
+                    <small>How much the particles move along the flow field</small>
+                    <div class="mt-1">
+                        <label class="float-start">less</label>
+                        <label class="float-end">more</label>
+                        <input type="range" class="form-range" min="0" max="1" step="0.001" [(ngModel)]="FLOW_INFLUENCE">
+                    </div>
+                </div>
+                <div class="border-bottom mb-3">
+                    <label class="fw-bold">FLOW_SCALE</label><br>
+                    <small>How "turbulent" the flow field is</small>
+                    <div class="mt-1">
+                        <label class="float-start">less</label>
+                        <label class="float-end">more</label>
+                        <input type="range" class="form-range" min="0" max="10" step="0.1" [(ngModel)]="FLOW_SCALE">
+                    </div>
+                </div>
+                <div class="border-bottom mb-3">
+                    <label class="fw-bold">TRAIL_INTENSITY</label><br>
+                    <small>How much particle trails fade every step</small>
+                    <div class="mt-1">
+                        <label class="float-start">less</label>
+                        <label class="float-end">more</label>
+                        <input type="range" class="form-range" min="20" max="230" step="1" [(ngModel)]="TRAIL_INTENSITY">
+                    </div>
+                </div>
+                <div class="border-bottom mb-3">
+                    <label class="fw-bold">STARTING_SPEED</label><br>
+                    <small>How fast the particles start</small>
+                    <div class="mt-1">
+                        <label class="float-start">slower</label>
+                        <label class="float-end">faster</label>
+                        <input type="range" class="form-range" min="1" max="5" step="0.01" [(ngModel)]="STARTING_SPEED">
+                    </div>
+                </div>
+                <div class="border-bottom mb-3">
+                    <label class="fw-bold">ACCELERATION</label><br>
+                    <small>How fast the particles accelerate</small>
+                    <div class="mt-1">
+                        <label class="float-start">slower</label>
+                        <label class="float-end">faster</label>
+                        <input type="range" class="form-range" min="0" max="0.05" step="0.0001" [(ngModel)]="ACCELERATION">
+                    </div>
+                </div>
+                <div class="border-bottom mb-3">
+                    <label class="fw-bold">VISIBILITY_RATE</label><br>
+                    <small>How fast the particles become visible</small>
+                    <div class="mt-1">
+                        <label class="float-start">slower</label>
+                        <label class="float-end">faster</label>
+                        <input type="range" class="form-range" min="1" max="10" step="0.01" [(ngModel)]="VISIBILITY_RATE">
+                    </div>
+                </div>
+                <div class="border-bottom mb-3">
+                    <label class="fw-bold">CIRCLE_SIZE</label><br>
+                    <small>How big the particles are</small>
+                    <div class="mt-1">
+                        <label class="float-start">smaller</label>
+                        <label class="float-end">bigger</label>
+                        <input type="range" class="form-range" min="1" max="10" step="0.01" [(ngModel)]="CIRCLE_SIZE">
+                    </div>
+                </div>
+                <div class="border-bottom mb-3">
+                    <label class="fw-bold">BACKGROUND_FILL</label><br>
+                    <small>Background color</small>
+                    <div class="mt-1">
+                        <input type="color" id="backgroundFill" [(ngModel)]="BACKGROUND_FILL">
+                    </div>
+                </div>
+                <div class="border-bottom mb-3">
+                    <label class="fw-bold">FOREGROUND_FILL</label><br>
+                    <small>Foreground color</small>
+                    <div class="mt-1">
+                        <input type="color" id="foregroundFill" [(ngModel)]="FOREGROUND_FILL">
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
 </div>
