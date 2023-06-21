@@ -69,8 +69,19 @@ s.draw = () => {
   FOREGROUND_FILL = "#787878";
 
   bgTextHidden = false;
+  scrolledPastGenerative = false;
 
   ngOnInit(): void {
+
+    let genSection = document.getElementById('generative-section');
+    let heroContainer = document.getElementById('hero-container');
+    window.onscroll = () => {
+      if (genSection && heroContainer) {
+        heroContainer.style.top = "-" + (window.scrollY >= genSection.offsetTop ? window.scrollY - genSection.offsetTop : 0) + 'px';
+      }
+    };
+    
+    // Background sketch
     const sketch = (s: p5) => {
 
       const NUM_RUNNERS = 500;
@@ -126,6 +137,10 @@ s.draw = () => {
     }
 
     let canvas = new p5(sketch);
+  }
+
+  scrollToTop(): void {
+    document.getElementById('hero-section')?.scrollIntoView();
   }
 
 }
