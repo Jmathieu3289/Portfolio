@@ -139,6 +139,13 @@ s.draw = () => {
     let canvas = new p5(sketch);
   }
 
+  scrollIntoView(element: string): void {
+    let ele = document.getElementById(element);
+    if (ele) {
+      ele.scrollIntoView();
+    }
+  }
+
   scrollToTop(): void {
     document.getElementById('hero-section')?.scrollIntoView();
   }

@@ -1,0 +1,9 @@
+<button (click)="showingInfo = !showingInfo;" class="p-0 btn btn-link border rounded d-flex flex-column hover-grow-brand align-items-center text-white text-decoration-none" [class.fullscreen]="showingInfo">
+    <div *ngIf="showingInfo" class="info">
+        <ng-content></ng-content>
+    </div>
+    <div *ngIf="!showingInfo" class="icon">
+        <img [src]="logo">
+        <div class="mb-2">{{framework}}</div>
+    </div>
+</button>

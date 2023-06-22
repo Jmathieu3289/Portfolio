@@ -5,11 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { FormsModule } from '@angular/forms';
+import { InfoSectionComponent } from './info-section/info-section.component';
+import { ThanksSectionComponent } from './thanks-section/thanks-section.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomepageComponent
+    HomepageComponent,
+    InfoSectionComponent,
+    ThanksSectionComponent
   ],
   imports: [
     BrowserModule,

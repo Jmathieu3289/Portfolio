@@ -9,127 +9,258 @@
             <h1 class="text-white">Hi. My Name Is Justin.</h1>
             <h2 class="text-white">I <b>Love</b> Making Cool Stuff.</h2>
         </div>
-        
     </div>
+    <button class="btn btn-link text-white" (click)="scrollIntoView('background-section')"><i class="fa-solid fa-arrow-down"></i></button>
 </div>
 <div id="background-section" class="w-100 vh-100 d-flex flex-column justify-content-center align-items-center position-relative">
     <div class="text-center" [class.opacity-0]="bgTextHidden" style="transition: opacity 0.3s">
         <h2 class="text-white">Like this background, for example!</h2>
-        <button type="button" class="btn btn-lg btn-rounded btn-outline-light mt-4" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBackgroundControls" aria-controls="offcanvasBackgroundControls" (click)="bgTextHidden = true;">Show Me How It Was Made</button>
+        <div>
+            <button type="button" class="btn btn-lg btn-rounded btn-outline-light mt-4" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBackgroundControls" aria-controls="offcanvasBackgroundControls" (click)="bgTextHidden = true;">Show Me How It Was Made</button><br>
+            <button class="btn btn-link text-white p-0 mt-4" (click)="scrollIntoView('generative-section')"><i class="fa-solid fa-arrow-down"></i></button>
+        </div>      
     </div>
 </div>
 <div id="generative-section" class="w-100 vh-100 d-flex flex-column justify-content-center align-items-center position-relative border-bottom border-secondary">
     <div class="text-center">
         <h3 class="text-white">If you like that, here are some other generative pieces I've made.</h3>
-        <div class="d-flex flex-row">
-            <div style="width: 200px; height: 200px" class="m-4 border"></div>
-            <div style="width: 200px; height: 200px" class="m-4 border"></div>
-            <div style="width: 200px; height: 200px" class="m-4 border"></div>
-            <div style="width: 200px; height: 200px" class="m-4 border"></div>
+        <div class="d-flex flex-row justify-content-center">
+            <a href="https://openprocessing.org/sketch/1228952" target="_blank" class="m-4 border rounded p-1 bg-dark text-white hover-grow text-decoration-none">
+                <img src="/assets/thumbnail1.jpg" class="img-fluid">
+                Do Not Repeat
+            </a>
+            <a href="https://openprocessing.org/sketch/1238108" target="_blank" class="m-4 border rounded p-1 bg-dark text-white hover-grow text-decoration-none">
+                <img src="/assets/thumbnail2.jpg" class="img-fluid">
+                Bridge At Night
+            </a>
+            <a href="https://openprocessing.org/sketch/1442151" target="_blank" class="m-4 border rounded p-1 bg-dark text-white hover-grow text-decoration-none">
+                <img src="/assets/thumbnail3.jpg" class="img-fluid">
+                City Map
+            </a>
+            <a href="https://openprocessing.org/sketch/1784163" target="_blank" class="m-4 border rounded p-1 bg-dark text-white hover-grow text-decoration-none">
+                <img src="/assets/thumbnail4.jpg" class="img-fluid">
+                Perfect Loop
+            </a>
         </div>
-        <h3 class="text-white">But I also <b>love</b> web development.</h3>
+        <h3 class="text-white mt-4">But I also <b>love</b> web development.</h3>
+        <button class="btn btn-link text-white" (click)="scrollIntoView('css-section')"><i class="fa-solid fa-arrow-down"></i></button>
     </div>
 </div>
 <div id="css-section" class="w-100 vh-100 d-flex flex-column justify-content-center align-items-center position-relative border-bottom border-secondary">
     <div class="text-center text-white">
         <h3 class="text-white">From designing <b>beautiful, intuitive</b> websites</h3>
         <div class="d-flex flex-row">
-            <div style="width: 200px; height: 200px" class="m-4 border rounded d-flex flex-column justify-content-center align-items-center">
-                <div class="mb-2">Bootstrap</div>
-                <img src="/assets/bootstrap-logo.svg" height="64" width="64">
-            </div>
-            <div style="width: 200px; height: 200px" class="m-4 border rounded d-flex flex-column justify-content-center align-items-center">
-                <div class="mb-1">Tailwindcss</div>
-                <img src="/assets/tailwind-logo.svg" height="64" width="64">
-            </div>
-            <div style="width: 200px; height: 200px" class="m-4 border rounded d-flex flex-column justify-content-center align-items-center">
-                <div class="mb-2">Bulma</div>
-                <img src="/assets/bulma-logo.svg" height="64" width="64">
-            </div>
+            <jm-info-section logo="/assets/bootstrap-logo.svg" framework="Bootstrap">
+                <div class="d-flex flex-row w-100 h-100">
+                    <div class="w-50 border"></div>
+                    <div class="w-50"></div>
+                </div>
+            </jm-info-section>
+            <jm-info-section logo="/assets/tailwind-logo.svg" framework="Tailwindcss"></jm-info-section>
+            <jm-info-section logo="/assets/bulma-logo.svg" framework="Bulma"></jm-info-section>
         </div>
+        <button class="btn btn-link text-white" (click)="scrollIntoView('js-section')"><i class="fa-solid fa-arrow-down"></i></button>
     </div>
 </div>
-<div class="w-100 vh-100 d-flex flex-column justify-content-center align-items-center position-relative border-bottom border-secondary">
+<div id="js-section" class="w-100 vh-100 d-flex flex-column justify-content-center align-items-center position-relative border-bottom border-secondary">
     <div class="text-center">
-        <h3 class="text-white">to building <b>rich, complex</b> experiences</h3>
+        <h3 class="text-white">to building <b>rich, extensive</b> experiences</h3>
         <div class="d-flex flex-row">
-            <div style="width: 200px; height: 200px" class="m-4 border rounded d-flex flex-column justify-content-center align-items-center">
-                <div class="mb-2">Angular</div>
-                <img src="/assets/angular-logo.svg" height="64" width="64">
-            </div>
-            <div style="width: 200px; height: 200px" class="m-4 border rounded d-flex flex-column justify-content-center align-items-center">
-                <div class="mb-2">React</div>
-                <img src="/assets/react-logo.svg" height="64" width="64">
-            </div>
-            <div style="width: 200px; height: 200px" class="m-4 border rounded d-flex flex-column justify-content-center align-items-center">
-                <div class="mb-2">Vue</div>
-                <img src="/assets/vue-logo.svg" height="64" width="64">
-            </div>
+            <jm-info-section logo="/assets/angular-logo.svg" framework="Angular"></jm-info-section>
+            <jm-info-section logo="/assets/react-logo.svg" framework="React"></jm-info-section>
+            <jm-info-section logo="/assets/vue-logo.svg" framework="Vue"></jm-info-section>
         </div>
+        <button class="btn btn-link text-white" (click)="scrollIntoView('api-section')"><i class="fa-solid fa-arrow-down"></i></button>
     </div>
 </div>
-<div class="w-100 vh-100 d-flex flex-column justify-content-center align-items-center position-relative border-bottom border-secondary">
+<div id="api-section" class="w-100 vh-100 d-flex flex-column justify-content-center align-items-center position-relative border-bottom border-secondary">
     <div class="text-center">
         <h3 class="text-white">to architecting <b>robust, scalable</b> APIs</h3>
         <div class="d-flex flex-row justify-content-center">
-            <div style="width: 200px; height: 200px" class="m-4 border rounded d-flex flex-column justify-content-center align-items-center">
-                <div class="mb-2">Java</div>
-                <img src="/assets/java-logo.png" height="64" width="64">
-            </div>
-            <div style="width: 200px; height: 200px" class="m-4 border rounded d-flex flex-column justify-content-center align-items-center">
-                <div class="mb-2">.NET</div>
-                <img src="/assets/dotnet-logo.svg" height="64" width="64">
-            </div>
-            <div style="width: 200px; height: 200px" class="m-4 border rounded d-flex flex-column justify-content-center align-items-center">
-                <div class="mb-2">Node</div>
-                <img src="/assets/nodejs-logo.svg" height="64" width="64">
-            </div>
+            <jm-info-section logo="/assets/java-logo.png" framework="Java"></jm-info-section>
+            <jm-info-section logo="/assets/dotnet-logo.svg" framework=".NET"></jm-info-section>
+            <jm-info-section logo="/assets/nodejs-logo.svg" framework="Node"></jm-info-section>
         </div>
+        <button class="btn btn-link text-white" (click)="scrollIntoView('other-section')"><i class="fa-solid fa-arrow-down"></i></button>
     </div>
 </div>
-<div class="w-100 vh-100 d-flex flex-column justify-content-center align-items-center position-relative border-bottom border-secondary">
+<div id="other-section" class="w-100 vh-100 d-flex flex-column justify-content-center align-items-center position-relative border-bottom border-secondary">
     <div class="text-center">
         <h3 class="text-white">designing databases, devops, and <b>everything</b> in between.</h3>
         <div class="d-flex flex-row justify-content-center">
-            <div style="width: 200px; height: 200px" class="m-4 border rounded d-flex flex-column justify-content-center align-items-center">
-                <div class="mb-2">Postgres</div>
-                <img src="/assets/postgresql-logo.svg" height="64" width="64">
-            </div>
-            <div style="width: 200px; height: 200px" class="m-4 border rounded d-flex flex-column justify-content-center align-items-center">
-                <div class="mb-2">Kubernetes</div>
-                <img src="/assets/kubernetes-logo.svg" height="64" width="64">
-            </div>
-            <div style="width: 200px; height: 200px" class="m-4 border rounded d-flex flex-column justify-content-center align-items-center">
-                <div class="mb-2">Github Actions</div>
-                <img src="/assets/github-actions-logo.svg" height="64" width="64">
-            </div>
+            <jm-info-section logo="/assets/postgresql-logo.svg" framework="Postgres"></jm-info-section>
+            <jm-info-section logo="/assets/kubernetes-logo.svg" framework="Kubernetes"></jm-info-section>
+            <jm-info-section logo="/assets/github-actions-logo.svg" framework="Github Actions"></jm-info-section>
         </div>
+        <button class="btn btn-link text-white" (click)="scrollIntoView('resume-section')"><i class="fa-solid fa-arrow-down"></i></button>
     </div>
 </div>
-<div class="w-100 vh-100 d-flex flex-column justify-content-center align-items-center position-relative border-bottom border-secondary">
-    <div class="text-center">
+<div id="resume-section" class="w-100 min-vh-100 d-flex flex-column justify-content-center align-items-center position-relative border-bottom border-secondary">
+    <div class="text-center mt-4">
         <h3 class="text-white">For over a decade, I've been immersed in the industry, consistently <br> demonstrating my abilities with a <b>successful</b> track record that speaks for itself.</h3>
         <div class="d-flex flex-row justify-content-center mt-4">
-            <div class="pe-4 border-end">
-                Test Test
+            <div class="pe-4 border-end w-50 d-flex flex-column align-items-center">
+                <div class="border rounded p-4 text-start left-resume" style="height: fit-content; max-width: 700px;">
+                    <div class="position-relative bg-secondary" style="margin-left: auto; margin-right: 0px; left: 3.37rem; margin-top: 0px; margin-bottom: auto; border-radius: 50%; width: 10px; height: 10px;"></div>
+                    <div class="position-relative bg-secondary" style="margin-left: auto; margin-right: 0px; left: 3rem; top: -5px; margin-top: 0px; margin-bottom: auto; width: 1.5rem; height: 1px;"></div>
+                    <b>Principal Developer</b><br>
+                    Trustedchoice.com, Milwaukee WI<br>
+                    <small>June 2018 - May 2022</small><br>
+                    <p class="mt-2">
+                        As a principal developer at Trustedchoice my responsibilities included leading development on several web projects from design to implementation. 
+                        I was also responsible for leading continued feature development and innovation on the core product which serves millions of users per year.
+                    </p>
+                    <ul>
+                        <li>
+                            Developed core component library used by all Trustedchoice websites, reducing code duplication and improving feature standardization.
+                            <ul>
+                                <li>
+                                    <b>Languages:</b> Javascript, HTML, CSS 
+                                </li>
+                                <li>
+                                    <b>Technologies: </b> Angular 7, Github, Nexus
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="mt-2">
+                            Developed and launched several websites for state insurance associations including implementations of core product features such as agent recommendation engine, smart agent finder and member directory.
+                            <ul>
+                                <li>
+                                    <b>Languages:</b> Java, Javascript, HTML, CSS
+                                </li>
+                                <li>
+                                    <b>Technologies: </b> Angular 7, Spring, Thymeleaf, Bootstrap 4, DC/OS, Mesos, Drone, AWS, Kenticocloud, Keycloak
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="mt-2">
+                            Developed Trustedchoice.com, standardizing front-end framework and upgrading versions of Angular and Bootstrap, as well as implementing continuous product updates and new features.
+                            <ul>
+                                <li>
+                                    <b>Languages:</b> Java, Javascript, HTML, CSS
+                                </li>
+                                <li>
+                                    <b>Technologies: </b> Angular 7, Spring, Thymeleaf, Bootstrap 4, DC/OS, Mesos, Drone, AWS, Kenticocloud, Keycloak
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="border rounded p-4 text-start left-resume" style="height: fit-content; max-width: 700px; margin-top: 500px;">
+                    <div class="position-relative bg-secondary" style="margin-left: auto; margin-right: 0px; left: 3.37rem; margin-top: 0px; margin-bottom: auto; border-radius: 50%; width: 10px; height: 10px;"></div>
+                    <div class="position-relative bg-secondary" style="margin-left: auto; margin-right: 0px; left: 3rem; top: -5px; margin-top: 0px; margin-bottom: auto; width: 1.5rem; height: 1px;"></div>
+                    <b>Lead Applications Developer</b><br>
+                    Sendik's Food Market, Milwaukee WI<br>
+                    <small>October 2011 - October 2017</small><br>
+                    <p class="mt-2">
+                        As the lead applications developer at Sendik’s my duties spanned the entire life-cycle of development from working directly with stakeholders on gathering requirements and defining 
+                        solutions to development, implementation, support and training. My responsibilities included managing project schedules and deadlines, architecting software with a focus on best practices 
+                        and principles, and providing ongoing support and training to users.
+                    </p>
+                    <ul>
+                        <li>
+                            Developed complete warehouse management system / ERP solution with physical inventory management, customer ordering, financial tracking and user systems. Worked with stakeholders, architected systems and researched warehousing best practices.
+                            <ul>
+                                <li>
+                                    <b>Languages:</b> C#, WPF, Javascript, HTML, CSS, PHP, MySQL
+                                </li>
+                                <li>
+                                    <b>Technologies: </b> AngularJS, REST API, SlimPHP, nHibernate, Git, Github
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="mt-2">
+                            Developed NTEP certified price calculating scale solution with custom hardware, client and server side software. Architected Node.js + AngularJS client solution and worked with the state certification board. Deployed at 18 store locations throughout Southeastern Wisconsin.
+                            <ul>
+                                <li>
+                                    <b>Languages:</b> Javascript, HTML, CSS, MySQL
+                                </li>
+                                <li>
+                                    <b>Technologies: </b> AngularJS, Node.js, Express, Navicat, Git, Github
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="mt-2">
+                            Developed online catering solution with customer ordering website, marketing accessible CMS, and store level order processing / management. Worked closely with marketing team stakeholders on design, implementation and feedback.
+                            <ul>
+                                <li>
+                                    <b>Languages:</b> Javascript, HTML, CSS, PHP, MySQL
+                                </li>
+                                <li>
+                                    <b>Technologies: </b> AWS (RDS, Elastic Beanstalk), AngularJS, REST API, SlimPHP, Git, CircleCI, Docker
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="mt-2">
+                            Developed digital signage management system including client software and marketing accessible content scheduling and editing software.
+                            <ul>
+                                <li>
+                                    <b>Languages:</b> Javascript, HTML, CSS, PHP, MySQL, C#, WPF
+                                </li>
+                                <li>
+                                    <b>Technologies: </b> Jquery, Visual Studio, nHibernate, Git
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="ps-4">
-                Test Test
+            <div class="ps-4 w-50">
+                <div class="border rounded p-4 text-start right-resume" style="height: fit-content; max-width: 700px; margin-top: 660px;">
+                    <div class="position-relative bg-secondary" style="left: -3.37rem;margin-top: 0px; margin-bottom: auto; border-radius: 50%; width: 10px; height: 10px;"></div>
+                    <div class="position-relative bg-secondary" style="left: -3rem; top: -5px; margin-top: 0px; margin-bottom: auto; width: 1.5rem; height: 1px;"></div>
+                    <b>Web Developer</b><br>
+                    Silgan Containers, Oconomowoc WI<br>
+                    <small>October 2017 - June 2018</small><br>
+                    <p class="mt-2">
+                        At Silgan Containers I work closely with a team of developers and business analysts to meet the software needs of one of the leading suppliers of rigid packaging 
+                        for consumer goods products worldwide. My responsibilities include development of core technologies used throughout all of the various internal applications 
+                        as well as development on a new version of the manufacturing software used in over 100 plants and warehouses globally. 
+
+                    </p>
+                    <ul>
+                        <li>
+                            Developed core technology used by all developers across several internal applications, helping to standardize coding practices as well as look and feel. 
+                            <ul>
+                                <li>
+                                    <b>Languages:</b> Javascript, HTML, CSS
+                                </li>
+                                <li>
+                                    <b>Technologies: </b> Angular 5, Gitlab, Jira
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="mt-2">
+                            Worked on development of the new version of Silgan’s manufacturing software, utilizing cutting edge technology to greatly enhance user experience and workflow while reducing errors and support costs.
+                            <ul>
+                                <li>
+                                    <b>Languages:</b> C#, Javascript, HTML, CSS, MSSQL
+                                </li>
+                                <li>
+                                    <b>Technologies: </b> Angular 5, ASP.net, insight.database, Gitlab, Jira
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
+    <button class="btn btn-link text-white mb-4" (click)="scrollIntoView('contact-section')"><i class="fa-solid fa-arrow-down"></i></button>
 </div>
-<div class="w-100 vh-100 d-flex flex-column justify-content-center align-items-center position-relative border-bottom border-secondary">
+<div id="contact-section" class="w-100 vh-100 d-flex flex-column justify-content-center align-items-center position-relative border-bottom border-secondary">
     <div class="text-center">
-        <h3 class="text-white">And having dedicated the past year to refining my skill set and familiarizing myself <br> in the most up-to-date technologies, I'm now <b>excited and eager</b> to get back to work.</h3><hr class="my-4">
-        <h3 class="text-white">So if you're on the hunt for a passionate developer, someone who thrives not just <br>  in the world of coding but also in collaborating with others, then I'd <b>love</b> for us to connect!</h3>
+        <h3 class="text-white">And having dedicated the past year to expanding my skill set and familiarizing myself <br> with the newest tools and frameworks, I'm now <b>excited and eager</b> to apply my talents.</h3><hr class="my-4">
+        <h3 class="text-white">So if you're looking for a passionate developer, someone who <b>loves</b> not just <br> coding but also collaborating with others and building <b>great</b> products, then let's connect!</h3>
         <div class="d-flex flex-row justify-content-center mt-5">
-            <a class="btn btn-lg btn-outline-light" href="/assets/Justin Mathieu Resume.pdf" target="_blank"><i class="fa-solid fa-download me-2"></i>Resume</a>
+            <a class="btn btn-lg btn-outline-light" href="/assets/Justin Mathieu Resume.pdf" target="_blank"><i class="fa-solid fa-file-lines me-2"></i>Resume</a>
             <a class="btn btn-lg btn-outline-light mx-4" href="https://www.linkedin.com/in/justin-mathieu-27a166144/" target="_blank"><i class="fa-brands fa-linkedin me-2"></i>LinkedIn</a>
             <a class="btn btn-lg btn-outline-light" href="https://github.com/Jmathieu3289" target="_blank"><i class="fa-brands fa-github me-2"></i>Github</a>
         </div>
+        <button class="btn btn-link text-white mt-4" (click)="scrollIntoView('thanks-section')"><i class="fa-solid fa-arrow-down"></i></button>
     </div>
 </div>
+<jm-thanks-section class="position-absolute"></jm-thanks-section>
 <div id="thanks-section" class="w-100 vh-100 d-flex flex-column justify-content-center align-items-center position-relative">
     <div class="text-center" [class.opacity-0]="bgTextHidden" style="transition: opacity 0.3s">
         <h4 class="text-white display-1 mb-4">Thanks for visiting!</h4>

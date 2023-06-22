@@ -34,3 +34,45 @@ h4 {
 img.profile-picture {
     height: 20vh;
 }
+
+a.hover-grow {
+    transition: all 0.3s;
+    width: 200px;
+    height: 222px;
+    &:hover {
+        width: 215px;
+        height: 238px;
+    }
+}
+
+button.hover-grow-brand {
+    transition: all 0.3s;
+    width: 200px;
+    height: 200px;
+    margin: 1.5rem;
+    justify-content: center;
+    &:hover {
+        width: 220px;
+        height: 220px;
+    }
+    &.fullscreen {
+        width: 60vw;
+        height: 80vh;
+        margin: 0;
+        div.info {
+            width: 100%;
+            height: 100%;
+        }
+        div.icon {
+            opacity: 0;
+            width: 0px;
+            height: 0px;
+        }
+    }
+    div.icon {
+        img {
+            width: 64px;
+            height: 64px;
+        }
+    }
+}
