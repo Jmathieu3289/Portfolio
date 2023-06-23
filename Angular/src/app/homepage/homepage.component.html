@@ -50,14 +50,9 @@
     <div class="text-center text-white">
         <h3 class="text-white">From designing <b>beautiful, intuitive</b> websites</h3>
         <div class="d-flex flex-row">
-            <jm-info-section logo="/assets/bootstrap-logo.svg" framework="Bootstrap">
-                <div class="d-flex flex-row w-100 h-100">
-                    <div class="w-50 border"></div>
-                    <div class="w-50"></div>
-                </div>
-            </jm-info-section>
-            <jm-info-section logo="/assets/tailwind-logo.svg" framework="Tailwindcss"></jm-info-section>
-            <jm-info-section logo="/assets/bulma-logo.svg" framework="Bulma"></jm-info-section>
+            <jm-info-section logo="/assets/bootstrap-logo.svg" framework="Bootstrap" [clickable]="true"></jm-info-section>
+            <jm-info-section logo="/assets/tailwind-logo.svg" framework="Tailwindcss" [clickable]="false"></jm-info-section>
+            <jm-info-section logo="/assets/bulma-logo.svg" framework="Bulma" [clickable]="false"></jm-info-section>
         </div>
         <button class="btn btn-link text-white" (click)="scrollIntoView('js-section')"><i class="fa-solid fa-arrow-down"></i></button>
     </div>
@@ -66,9 +61,9 @@
     <div class="text-center">
         <h3 class="text-white">to building <b>rich, extensive</b> experiences</h3>
         <div class="d-flex flex-row">
-            <jm-info-section logo="/assets/angular-logo.svg" framework="Angular"></jm-info-section>
-            <jm-info-section logo="/assets/react-logo.svg" framework="React"></jm-info-section>
-            <jm-info-section logo="/assets/vue-logo.svg" framework="Vue"></jm-info-section>
+            <jm-info-section logo="/assets/angular-logo.svg" framework="Angular" [clickable]="true"></jm-info-section>
+            <jm-info-section logo="/assets/react-logo.svg" framework="React" [clickable]="false"></jm-info-section>
+            <jm-info-section logo="/assets/vue-logo.svg" framework="Vue" [clickable]="false"></jm-info-section>
         </div>
         <button class="btn btn-link text-white" (click)="scrollIntoView('api-section')"><i class="fa-solid fa-arrow-down"></i></button>
     </div>
@@ -77,9 +72,9 @@
     <div class="text-center">
         <h3 class="text-white">to architecting <b>robust, scalable</b> APIs</h3>
         <div class="d-flex flex-row justify-content-center">
-            <jm-info-section logo="/assets/java-logo.png" framework="Java"></jm-info-section>
-            <jm-info-section logo="/assets/dotnet-logo.svg" framework=".NET"></jm-info-section>
-            <jm-info-section logo="/assets/nodejs-logo.svg" framework="Node"></jm-info-section>
+            <jm-info-section logo="/assets/java-logo.png" framework="Java" [clickable]="false"></jm-info-section>
+            <jm-info-section logo="/assets/dotnet-logo.svg" framework=".NET" [clickable]="false"></jm-info-section>
+            <jm-info-section logo="/assets/nodejs-logo.svg" framework="Node" [clickable]="false"></jm-info-section>
         </div>
         <button class="btn btn-link text-white" (click)="scrollIntoView('other-section')"><i class="fa-solid fa-arrow-down"></i></button>
     </div>
@@ -88,9 +83,9 @@
     <div class="text-center">
         <h3 class="text-white">designing databases, devops, and <b>everything</b> in between.</h3>
         <div class="d-flex flex-row justify-content-center">
-            <jm-info-section logo="/assets/postgresql-logo.svg" framework="Postgres"></jm-info-section>
-            <jm-info-section logo="/assets/kubernetes-logo.svg" framework="Kubernetes"></jm-info-section>
-            <jm-info-section logo="/assets/github-actions-logo.svg" framework="Github Actions"></jm-info-section>
+            <jm-info-section logo="/assets/postgresql-logo.svg" framework="Postgres" [clickable]="false"></jm-info-section>
+            <jm-info-section logo="/assets/kubernetes-logo.svg" framework="Kubernetes" [clickable]="false"></jm-info-section>
+            <jm-info-section logo="/assets/github-actions-logo.svg" framework="Github Actions" [clickable]="false"></jm-info-section>
         </div>
         <button class="btn btn-link text-white" (click)="scrollIntoView('resume-section')"><i class="fa-solid fa-arrow-down"></i></button>
     </div>
@@ -101,8 +96,9 @@
         <div class="d-flex flex-row justify-content-center mt-4">
             <div class="pe-4 border-end w-50 d-flex flex-column align-items-center">
                 <div class="border rounded p-4 text-start left-resume" style="height: fit-content; max-width: 700px;">
-                    <div class="position-relative bg-secondary" style="margin-left: auto; margin-right: 0px; left: 3.37rem; margin-top: 0px; margin-bottom: auto; border-radius: 50%; width: 10px; height: 10px;"></div>
-                    <div class="position-relative bg-secondary" style="margin-left: auto; margin-right: 0px; left: 3rem; top: -5px; margin-top: 0px; margin-bottom: auto; width: 1.5rem; height: 1px;"></div>
+                    <div class="position-relative bg-secondary float-end" style="margin-left: auto; margin-right: 0px; left: 3.37rem; margin-top: 0px; margin-bottom: auto; border-radius: 50%; width: 10px; height: 10px;"></div>
+                    <div class="position-relative bg-secondary float-end" style="margin-left: auto; margin-right: 0px; left: 3.6rem; top: 5px; margin-top: 0px; margin-bottom: auto; width: 1.5rem; height: 1px;"></div>
+                    <div class="position-relative float-end" style="margin-left: auto; margin-right: 0px; left: 8rem; top: -10px; margin-top: 0px; margin-bottom: auto; width: 30px; font-size: 1.2em;">2022</div>
                     <b>Principal Developer</b><br>
                     Trustedchoice.com, Milwaukee WI<br>
                     <small>June 2018 - May 2022</small><br>
@@ -115,7 +111,7 @@
                             Developed core component library used by all Trustedchoice websites, reducing code duplication and improving feature standardization.
                             <ul>
                                 <li>
-                                    <b>Languages:</b> Javascript, HTML, CSS 
+                                    <b>Languages:</b> Typescript, HTML, CSS 
                                 </li>
                                 <li>
                                     <b>Technologies: </b> Angular 7, Github, Nexus
@@ -126,7 +122,7 @@
                             Developed and launched several websites for state insurance associations including implementations of core product features such as agent recommendation engine, smart agent finder and member directory.
                             <ul>
                                 <li>
-                                    <b>Languages:</b> Java, Javascript, HTML, CSS
+                                    <b>Languages:</b> Java, Typescript, HTML, CSS
                                 </li>
                                 <li>
                                     <b>Technologies: </b> Angular 7, Spring, Thymeleaf, Bootstrap 4, DC/OS, Mesos, Drone, AWS, Kenticocloud, Keycloak
@@ -134,21 +130,22 @@
                             </ul>
                         </li>
                         <li class="mt-2">
-                            Developed Trustedchoice.com, standardizing front-end framework and upgrading versions of Angular and Bootstrap, as well as implementing continuous product updates and new features.
+                            Developed analytics dashboards for state associations, allowing for powerful insight into statistics about traffic, retention and growth for agencies
                             <ul>
                                 <li>
-                                    <b>Languages:</b> Java, Javascript, HTML, CSS
+                                    <b>Languages:</b> Java, Typescript, HTML, CSS
                                 </li>
                                 <li>
-                                    <b>Technologies: </b> Angular 7, Spring, Thymeleaf, Bootstrap 4, DC/OS, Mesos, Drone, AWS, Kenticocloud, Keycloak
+                                    <b>Technologies: </b> React, Spring, Kubernetes, Github Actions, AWS, Keycloak
                                 </li>
                             </ul>
                         </li>
                     </ul>
                 </div>
-                <div class="border rounded p-4 text-start left-resume" style="height: fit-content; max-width: 700px; margin-top: 500px;">
-                    <div class="position-relative bg-secondary" style="margin-left: auto; margin-right: 0px; left: 3.37rem; margin-top: 0px; margin-bottom: auto; border-radius: 50%; width: 10px; height: 10px;"></div>
-                    <div class="position-relative bg-secondary" style="margin-left: auto; margin-right: 0px; left: 3rem; top: -5px; margin-top: 0px; margin-bottom: auto; width: 1.5rem; height: 1px;"></div>
+                <div class="border rounded p-4 text-start left-resume" style="height: fit-content; max-width: 700px; margin-top: 600px;">
+                    <div class="position-relative bg-secondary float-end" style="margin-left: auto; margin-right: 0px; left: 3.37rem; margin-top: 0px; margin-bottom: auto; border-radius: 50%; width: 10px; height: 10px;"></div>
+                    <div class="position-relative bg-secondary float-end" style="margin-left: auto; margin-right: 0px; left: 3.6rem; top: 5px; margin-top: 0px; margin-bottom: auto; width: 1.5rem; height: 1px;"></div>
+                    <div class="position-relative float-end" style="margin-left: auto; margin-right: 0px; left: 8rem; top: -10px; margin-bottom: auto; width: 30px; font-size: 1.2em">2011</div>
                     <b>Lead Applications Developer</b><br>
                     Sendik's Food Market, Milwaukee WI<br>
                     <small>October 2011 - October 2017</small><br>
@@ -207,10 +204,11 @@
             </div>
             <div class="ps-4 w-50">
                 <div class="border rounded p-4 text-start right-resume" style="height: fit-content; max-width: 700px; margin-top: 660px;">
-                    <div class="position-relative bg-secondary" style="left: -3.37rem;margin-top: 0px; margin-bottom: auto; border-radius: 50%; width: 10px; height: 10px;"></div>
-                    <div class="position-relative bg-secondary" style="left: -3rem; top: -5px; margin-top: 0px; margin-bottom: auto; width: 1.5rem; height: 1px;"></div>
-                    <b>Web Developer</b><br>
-                    Silgan Containers, Oconomowoc WI<br>
+                    <div class="position-relative bg-secondary float-start" style="left: -3.37rem;margin-top: 0px; margin-bottom: auto; border-radius: 50%; width: 10px; height: 10px;"></div>
+                    <div class="position-relative bg-secondary float-start" style="left: -3.6rem; top: 5px; margin-top: 0px; margin-bottom: auto; width: 1.5rem; height: 1px;"></div>
+                    <div class="position-relative float-start" style="left: -8.8rem; margin-top: 0px; top:-10px; margin-bottom: auto; width: 30px; font-size: 1.2em;">2017</div>
+                    <b style="margin-left: -4rem;">Web Developer</b><br>
+                    <span style="margin-left: -4rem;">Silgan Containers, Oconomowoc WI</span><br>
                     <small>October 2017 - June 2018</small><br>
                     <p class="mt-2">
                         At Silgan Containers I work closely with a team of developers and business analysts to meet the software needs of one of the leading suppliers of rigid packaging 

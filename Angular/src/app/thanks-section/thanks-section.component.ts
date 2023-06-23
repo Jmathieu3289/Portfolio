@@ -47,7 +47,7 @@ export class ThanksSectionComponent implements OnInit {
         let cnv = s.createCanvas(s.windowWidth, s.windowHeight);
         cnv.parent('thanks-container');
 
-        s.fill(25);
+        s.fill(18);
         s.noStroke();
       };
 
@@ -59,7 +59,7 @@ export class ThanksSectionComponent implements OnInit {
 
         s.background(15);
 
-        a += s.PI/30000;
+        a += s.PI/40000;
 
         for (let x = 0; x <= s.width; x += SPACING) {
           for (let y = 0; y <= s.height + 80; y += SPACING) {
@@ -71,7 +71,7 @@ export class ThanksSectionComponent implements OnInit {
       };
     }
 
-    let canvas = new p5(sketch);
+    new p5(sketch);
   }
 
 }

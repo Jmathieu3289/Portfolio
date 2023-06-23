@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as p5 from 'p5';
+import { InfoSectionComponent } from '../info-section/info-section.component';
 
 @Component({
   selector: 'app-homepage',
@@ -136,7 +137,7 @@ s.draw = () => {
       };
     }
 
-    let canvas = new p5(sketch);
+    new p5(sketch);
   }
 
   scrollIntoView(element: string): void {

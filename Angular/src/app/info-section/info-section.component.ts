@@ -9,6 +9,13 @@ export class InfoSectionComponent {
 
   @Input() logo: string = '';
   @Input() framework: string = '';
+  @Input() clickable: boolean = true;
   
   showingInfo = false;
+
+  toggleInfo(): void {
+    if (this.clickable) {
+      this.showingInfo = !this.showingInfo;
+    }
+  }
 }
